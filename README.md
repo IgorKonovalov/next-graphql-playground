@@ -1,5 +1,7 @@
 This is a temp project in order to experiment with some brand new tech. 
 
+It uses GraphQl api of [`SpaceX`](http://api.spacex.land/graphql/)
+
 Project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
 
 dev server:
