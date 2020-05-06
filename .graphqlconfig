@@ -1,0 +1,9 @@
+{
+  "name": "SpaceX Graphql Schema",
+  "includes": ["*"],
+  "extensions": {
+    "endpoints": {
+      "url": "http://api.spacex.land/graphql/"
+    }
+  }
+}
