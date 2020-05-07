@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 
-const ROCKETS_STARTS_QUERY = gql`
-  query {
-    launchesPast(limit: 10) {
+const LAUNCHES_PAST = gql`
+  query LaunchesPast($limit: Int!) {
+    launchesPast(limit: $limit) {
       mission_name
       launch_site {
         site_name
@@ -16,4 +16,4 @@ const ROCKETS_STARTS_QUERY = gql`
   }
 `;
 
-export default ROCKETS_STARTS_QUERY;
+export default LAUNCHES_PAST;

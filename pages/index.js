@@ -2,10 +2,14 @@ import React from 'react';
 import Head from 'next/head';
 import { useQuery } from '@apollo/react-hooks';
 import ImageWithFallback from '../components/imageWithFallback.jsx';
-import ROCKETS_STARTS_QUERY from '../graphql/rocketsStarts.query';
+import LAUNCHES_PAST from '../graphql/launches_past.graphql.js';
 
 const Home = () => {
-  const { data, loading, error } = useQuery(ROCKETS_STARTS_QUERY);
+  const { data, loading, error } = useQuery(LAUNCHES_PAST, {
+    variables: {
+      limit: 2,
+    },
+  });
   const [launchId, handleSetLaunchId] = React.useState('');
 
   if (loading) {
@@ -19,7 +23,7 @@ const Home = () => {
   return (
     <div>
       <Head>
-        <title>Home</title>
+        <title>SpaceX Launches explorer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ul style={{ listStyle: 'none' }}>

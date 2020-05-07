@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 
 export default function ImageWithFallback({ srcSet }) {
   const isEmpty = srcSet.length === 0;
+  const randomImageIndex = Math.floor(Math.random() * srcSet.length);
   return (
     <div>
       {isEmpty ? (
@@ -9,7 +10,7 @@ export default function ImageWithFallback({ srcSet }) {
       ) : (
         <img
           style={{ width: '200px', maxHeight: '200px' }}
-          src={srcSet[0]}
+          src={srcSet[randomImageIndex]}
           alt=""
         />
       )}
