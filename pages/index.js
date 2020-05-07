@@ -12,7 +12,9 @@ const Home = () => {
         <title>SpaceX Launches explorer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <LaunchesTable handleSetLaunchId={handleSetLaunchId} />
+      <div className="container">
+        <LaunchesTable handleSetLaunchId={handleSetLaunchId} />
+      </div>
       {launchId ? <ImageWithFallback launchId={launchId} /> : null}
     </div>
   );

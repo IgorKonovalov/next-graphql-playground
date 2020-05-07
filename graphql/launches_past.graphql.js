@@ -8,6 +8,7 @@ const LAUNCHES_PAST = gql`
         site_name
       }
       links {
+        mission_patch_small
         flickr_images
         wikipedia
       }

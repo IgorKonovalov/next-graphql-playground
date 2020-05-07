@@ -1,5 +1,6 @@
 import React from 'react';
 import App from 'next/app';
+import '../css/tailwind.css';
 import { ApolloProvider } from '@apollo/react-hooks';
 
 import withData from '../utils/apollo-client';
